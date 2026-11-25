@@ -1,0 +1,33 @@
+@use "../util" as *;
+
+.card {
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  scroll-snap-align: start; //for carousel
+
+  &__small {
+    width: 10rem;
+  }
+  &__medium {
+    width: 12.5rem;
+  }
+  &__large {
+    width: min(24rem, calc(100vw - 3rem));
+  }
+
+  &__img {
+    width: inherit;
+    aspect-ratio: 1 / 1;
+    display: block;
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__text-box {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,63 @@
+@use "../util" as *;
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+%container {
+  width: min(calc(100% - 3rem), 75rem);
+  margin-inline: auto;
+}
+
+.container {
+  @extend %container;
+}
+
+section:not(#hero) {
+  padding-block: 2rem;
+
+  &:not(#categories) h2 {
+    margin-bottom: 1rem;
+    @include breakpoint(35rem) {
+      margin-inline: auto;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+header,
+#hero__footer {
+  .container {
+    @extend %flex;
+    justify-content: space-between;
+  }
+}
+
+#hero__scrim {
+  .container {
+    height: 100%;
+    padding-block: 3rem 6.5rem;
+
+    @extend %flex;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+#Ready-To-Buy .carousel__track {
+  @include breakpoint(35rem) {
+    overflow: hidden;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+#Events {
+  .card__img {
+    aspect-ratio: 5 / 3;
+    opacity: 1;
+  }
+}

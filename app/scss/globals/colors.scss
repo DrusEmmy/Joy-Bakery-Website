@@ -1,0 +1,13 @@
+:root {
+  --bg: #f2eceb;
+  --primary: #a65011;
+  --secondary: #f0dbd2;
+  --secondary-muted: #f7e9e6;
+  --tertiary: #5e2e12;
+  --alternate-sections: #f0dbd2;
+  --border: #e0bcac;
+}
+
+.alt-section {
+  background-color: var(--alternate-sections);
+}

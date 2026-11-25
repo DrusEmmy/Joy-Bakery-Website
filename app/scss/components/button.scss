@@ -1,0 +1,30 @@
+@use "../util" as *;
+
+button,
+.button {
+  background-color: var(--primary);
+  border: none;
+  color: var(--secondary-muted);
+  font-family: "Poppins", sans-serif;
+
+  // width: 100%;
+  text-align: center;
+
+  font-size: 1rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  &__large {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  &__small {
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

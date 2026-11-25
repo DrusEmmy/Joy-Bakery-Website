@@ -1,0 +1,14 @@
+@use "sass:map";
+
+//640px, 1110px, 1440px
+$breakpoint: (
+  "tablet": "48rem",
+  "desktop": "64rem", // "x-large": "87.5rem",
+);
+
+@mixin breakpoint($size) {
+  $breakpoint_value: map.get($breakpoint, $size) or $size;
+  @media (width > $breakpoint_value) {
+    @content;
+  }
+}

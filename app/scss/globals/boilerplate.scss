@@ -1,0 +1,45 @@
+@use "../util" as *;
+
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 5.5rem;
+
+  // border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+*:not(:root)::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--bg);
+  color: var(--tertiary);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: rem(14);
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+}

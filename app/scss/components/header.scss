@@ -1,0 +1,95 @@
+@use "../util" as *;
+
+#header {
+  position: fixed;
+  width: 100%;
+  padding-block: 0.5rem;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), #0000);
+  color: var(--secondary-muted);
+  backdrop-filter: blur(1rem);
+
+  z-index: 1;
+
+  &__logo {
+    width: 10rem;
+
+    &--img {
+      height: 5rem;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+      ul {
+        display: flex;
+
+        li {
+          padding: 0.5rem 1rem;
+          border-radius: 0.25rem;
+
+          &:hover {
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    &--hamburger {
+      background-color: #0000;
+      @include breakpoint(desktop) {
+        display: none;
+      }
+    }
+    &--hamburger:hover ~ #header__nav-box,
+    #header__nav-box:hover {
+      display: block;
+    }
+
+    &--order-now {
+      width: 10rem;
+      display: none;
+      @include breakpoint(desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__nav-box {
+    display: none;
+    position: absolute;
+    width: max-content;
+    top: 0;
+    right: 0;
+    padding-top: 3.5rem;
+
+    &--ul {
+      width: fit-content;
+      background-color: var(--primary);
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+
+      display: grid;
+      gap: 0.25rem;
+
+      li {
+        padding: 0.125rem 0.5rem;
+        border-radius: 0.125rem;
+      }
+
+      li:hover {
+        background: white;
+
+        a {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
