@@ -1,12 +1,12 @@
 @use "../util" as *;
 
 #hero {
-  background-image: url(/images/hero-bg.png);
+  background-image: url(/images/hero-bg.webp);
   background-size: cover;
   background-position: center;
 
   @include breakpoint(tablet) {
-    background-image: url(/images/hero-bg-desktop-2.png);
+    background-image: url(/images/hero-bg-desktop.webp);
   }
 
   height: 35rem;

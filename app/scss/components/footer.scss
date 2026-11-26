@@ -73,6 +73,13 @@
     padding: 2rem 0 0;
 
     gap: 1rem;
+
+    a {
+      display: grid;
+      place-items: center;
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+    }
     @include breakpoint(35rem) {
       width: fit-content;
       padding: 0 2rem 0;

@@ -57,3 +57,28 @@ carousels.forEach((carousel) => {
 
   updateButtons();
 });
+
+const menuWrap = document.getElementById("header__button");
+const burger = document.getElementById("header__button--hamburger");
+
+const setMenu = (open) => {
+  menuWrap.classList.toggle("is-open", open);
+  burger.setAttribute("aria-expanded", String(open));
+  burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+};
+
+burger.addEventListener("click", () =>
+  setMenu(!menuWrap.classList.contains("is-open")),
+);
+document
+  .querySelectorAll("#header__nav-box a")
+  .forEach((a) => a.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") setMenu(false);
+});
+document.addEventListener("click", (e) => {
+  if (!menuWrap.contains(e.target)) setMenu(false);
+});
+window.matchMedia("(min-width: 64rem)").addEventListener("change", (e) => {
+  if (e.matches) setMenu(false);
+});

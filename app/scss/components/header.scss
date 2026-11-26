@@ -47,8 +47,7 @@
         display: none;
       }
     }
-    &--hamburger:hover ~ #header__nav-box,
-    #header__nav-box:hover {
+    &.is-open #header__nav-box {
       display: block;
     }
 

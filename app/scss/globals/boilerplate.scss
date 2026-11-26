@@ -10,9 +10,11 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-padding-top: 5.5rem;
 
   // border: 0.1px solid rgba(0, 0, 0, 0.5);
+}
+:root {
+  scroll-padding-top: 5.5rem;
 }
 
 *:not(:root)::-webkit-scrollbar {
