@@ -25,6 +25,7 @@ npm-debug.log*
 /build
 /.next
 /out
+/public
 
 # IDEs and editors
 /.idea

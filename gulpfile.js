@@ -44,3 +44,17 @@ function watchTask() {
 }
 
 exports.default = series(scssTask, jsTask, browserSyncServer, watchTask);
+
+function copyHtml() {
+  return src("index.html").pipe(dest("public"));
+}
+
+function copyDist() {
+  return src("dist/**/*", { encoding: false }).pipe(dest("public/dist"));
+}
+
+function copyImages() {
+  return src("images/**/*", { encoding: false }).pipe(dest("public/images"));
+}
+
+exports.build = series(scssTask, jsTask, copyDist, copyHtml, copyImages);
