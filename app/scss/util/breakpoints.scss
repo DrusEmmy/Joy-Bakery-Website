@@ -8,7 +8,7 @@ $breakpoint: (
 
 @mixin breakpoint($size) {
   $breakpoint_value: map.get($breakpoint, $size) or $size;
-  @media (width > $breakpoint_value) {
+  @media (width >= $breakpoint_value) {
     @content;
   }
 }

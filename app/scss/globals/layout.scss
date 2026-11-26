@@ -58,6 +58,11 @@ header,
 #Events {
   .card__img {
     aspect-ratio: 5 / 3;
-    opacity: 1;
+  }
+}
+
+#Made-For-You {
+  .card__img {
+    aspect-ratio: 3 / 2;
   }
 }

@@ -5,6 +5,7 @@
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   overflow: hidden;
+  height: fit-content;
 
   scroll-snap-align: start; //for carousel
 
@@ -15,7 +16,7 @@
     width: 12.5rem;
   }
   &__large {
-    width: min(24rem, calc(100vw - 3rem));
+    width: min(24.1rem, calc(100vw - 3rem));
   }
 
   &__img {

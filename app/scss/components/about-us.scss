@@ -1,1 +1,27 @@
 @use "util" as *;
+
+.About-Us {
+  &__card {
+    background-color: #0000;
+    border: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 1rem;
+  }
+
+  &__img {
+    aspect-ratio: 5 / 3;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+}
